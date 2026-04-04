@@ -1,0 +1,37 @@
+body
+{
+    background-color: aliceblue;
+}
+
+.biodata
+{
+    background-color: aliceblue;
+}
+
+.kontak
+{
+    background-color: aliceblue;
+}
+
+.h1
+{
+    display: flex;
+    justify-content: center;
+}
+
+.p 
+{
+    display: grid;
+    justify-content: center;
+    padding-right: 420px;
+}
+
+.navbar ul {
+    display: flex;          
+    list-style: none;      
+    padding: 0;
+    margin: 0;
+    gap: 20px;               
+    justify-content: center;
+    font-size: 25px;
+}
