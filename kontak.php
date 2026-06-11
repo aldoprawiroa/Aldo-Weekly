@@ -10,9 +10,9 @@
 <div>
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="biodata.html">Biodata</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="biodata.php">Biodata</a></li>
+            <li><a href="kontak.php">Kontak</a></li>
         </ul>
     </nav>
 </div>

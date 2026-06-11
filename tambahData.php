@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Data</title>
 </head>
+
 <body>
     <h2>
         Tambah Data Mahasiswa
     </h2>
-    <form action="Mahasiswa.html" method="post">
+    <form action="Mahasiswa.php" method="post">
         <table cellpadding="5px">
             <tr>
                 <td>
@@ -79,7 +81,7 @@
             </tr>
             <tr>
                 <td colspan="3">
-                    <button type="submit" name="submit" >Tambah Data</button>
+                    <button type="submit" name="submit">Tambah Data</button>
                 </td>
             </tr>
         </table>
@@ -88,7 +90,7 @@
     <h2>
         Form Kedua
     </h2>
-    <form action="form-mahasiswa.html" method="post">
+    <form action="form-mahasiswa.php" method="post">
         <table cellpadding="5px">
             <tr>
                 <td>
@@ -166,9 +168,8 @@
                 <td><label for="tingkat-kepuasan">Tingkat Kepuasan</label></td>
                 <td>:</td>
                 <td>
-                    <input type="range" id="tingkat-kepuasan" name="tingkat-kepuasan"
-                    min="1" max="10" step="1"
-                    oninput="document.getElementById('nilai-kepuasan').textContent = this.value">
+                    <input type="range" id="tingkat-kepuasan" name="tingkat-kepuasan" min="1" max="10" step="1"
+                        oninput="document.getElementById('nilai-kepuasan').textContent = this.value">
                     <span id="nilai-kepuasan">5</span>
                 </td>
             </tr>
@@ -248,22 +249,23 @@
                 </td>
                 <td>
                     <select id="jurusan" name="jurusan" required>
-                    <option value="">
-                        -- Pilih Jurusan --
-                    </option>
-                    <option value="teknologi-informasi">Teknologi Informasi</option>
+                        <option value="">
+                            -- Pilih Jurusan --
+                        </option>
+                        <option value="teknologi-informasi">Teknologi Informasi</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td colspan="3">
-                <button type="submit" name="submit">
-                    Submit
-                </button>
-            </td>
+                    <button type="submit" name="submit">
+                        Submit
+                    </button>
+                </td>
             </tr>
         </table>
     </form>
 
 </body>
+
 </html>

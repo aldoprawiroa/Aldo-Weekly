@@ -10,25 +10,25 @@
 <div>
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="biodata.html">Biodata</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="biodata.php">Biodata</a></li>
+            <li><a href="kontak.php">Kontak</a></li>
         </ul>
     </nav>
 
     <table align="center" cellspacing="0px" cellpadding="10px">
         <tr>
             <td>
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
             </td>
             <td>
-                <a href="biodata.html">Biodata</a>
+                <a href="biodata.php">Biodata</a>
             </td>
             <td>
-                <a href="kontak.html">Kontak</a>
+                <a href="kontak.php">Kontak</a>
             </td>
             <td>
-                <a href="Mahasiswa.html">Data Mahasiswa</a>
+                <a href="Mahasiswa.php">Data Mahasiswa</a>
             </td>
         </tr>
     </table>
