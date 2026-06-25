@@ -1,30 +1,9 @@
 <?php
-    $nama = "Firman<br>";
-    echo "hello $nama";
-    $a = 10;
-    $b = 30;
-    $c = $a + $b;
-    echo $c;
-
-    if ($c>30) {
-        echo " lebi dari 30<br>";
-    }
-
-    $array = ["amin<br>", "pirman"];
-    echo $array[0];
 
     //API
-    $koneksi = mysqli_connect("localhost","root", "", "aldweekly");
-    if($koneksi) {
-        echo "koneksi berhasil<br>";
-    }
-
+    require 'fungsi.php';
     $query = "SELECT * FROM mahasiswa";
-    $result = mysqli_query($koneksi, $query);
-    // while($mhs = mysqli_fetch_assoc($result)) {
-    //     var_dump($mhs);
-    // }
-    
+    $mahasiswas = tampildata($query);
 
 ?>
 
@@ -77,11 +56,13 @@
         </tr>
 
         <?php
-        while($mhs = mysqli_fetch_assoc($result)) {
-        var_dump($mhs);
+        $no=1;
+        foreach($mahasiswas as $mhs) :
+            
+        
         ?>
         <tr align="center">
-            <td><?php echo $mhs['id']; ?></td>
+            <td><?php echo $no; ?></td>
             <td><?php echo $mhs['nama']; ?></td>
             <td><?php echo $mhs['nim']; ?></td>
             <td><?php echo $mhs['jurusan']; ?></td>
@@ -94,7 +75,8 @@
             </td>
         </tr>
         <?php
-        }
+        $no++;
+        endforeach;
         ?>
     </table>
     <hr />

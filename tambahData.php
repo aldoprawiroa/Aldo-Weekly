@@ -1,3 +1,24 @@
+<?php
+    require 'fungsi.php';
+    if(isset($_POST['submit'])) {
+        $nama = $_POST['nama'];
+        $NIM = $_POST['NIM'];
+        $jurusan = $_POST['jurusan'];
+        $Email = $_POST['Email'];
+        $no_hp = $_POST['no-hp'];
+        $Foto = $_POST['Foto'];
+
+        $query = "INSERT INTO mahasiswa (nama, NIM, jurusan, Email, no_hp, Foto) VALUES ('$nama', '$NIM', '$jurusan', '$Email', '$no_hp', '$Foto')";
+        mysqli_query($koneksi, $query);
+
+        if(mysqli_affected_rows($koneksi) > 0) {
+            echo "<script>alert('Data berhasil ditambahkan!'); window.location.href='Mahasiswa.php';</script>";
+        } else {
+            echo "<script>alert('Data gagal ditambahkan!'); window.location.href='tambahData.php';</script>";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +32,7 @@
     <h2>
         Tambah Data Mahasiswa
     </h2>
-    <form action="Mahasiswa.php" method="post">
+    <form action="" method="post">
         <table cellpadding="5px">
             <tr>
                 <td>
@@ -32,51 +53,51 @@
                     :
                 </td>
                 <td>
-                    <input type="text" id="NIM" name="NIM">
+                    <input type="text" id="NIM" name="NIM" required>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="foto">FOTO</label>
+                    <label for="jurusan">Jurusan</label>
                 </td>
                 <td>
                     :
                 </td>
                 <td>
-                    <input type="file" id="foto" name="foto">
+                    <input type="text" id="jurusan" name="jurusan" required>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="UTS">UTS</label>
+                    <label for="Email">Email</label>
                 </td>
                 <td>
                     :
                 </td>
                 <td>
-                    <input type="number" id="UTS" name="UTS">
+                    <input type="email" id="Email" name="Email" required>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="UAS">UAS</label>
+                    <label for="no-hp">No HP</label>
                 </td>
                 <td>
                     :
                 </td>
                 <td>
-                    <input type="number" id="UAS" name="UAS">
+                    <input type="number" id="no-hp" name="no-hp" required>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="tugas">Tugas</label>
+                    <label for="Foto">Foto</label>
                 </td>
                 <td>
                     :
                 </td>
                 <td>
-                    <input type="number" id="tugas" name="tugas">
+                    <input type="text" id="Foto" name="Foto" required>
                 </td>
             </tr>
             <tr>
