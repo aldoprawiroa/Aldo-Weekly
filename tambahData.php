@@ -1,22 +1,18 @@
 <?php
     require 'fungsi.php';
-    if(isset($_POST['submit'])) {
-        $nama = $_POST['nama'];
-        $NIM = $_POST['NIM'];
-        $jurusan = $_POST['jurusan'];
-        $Email = $_POST['Email'];
-        $no_hp = $_POST['no-hp'];
-        $Foto = $_POST['Foto'];
-
-        $query = "INSERT INTO mahasiswa (nama, NIM, jurusan, Email, no_hp, Foto) VALUES ('$nama', '$NIM', '$jurusan', '$Email', '$no_hp', '$Foto')";
-        mysqli_query($koneksi, $query);
-
-        if(mysqli_affected_rows($koneksi) > 0) {
-            echo "<script>alert('Data berhasil ditambahkan!'); window.location.href='Mahasiswa.php';</script>";
-        } else {
-            echo "<script>alert('Data gagal ditambahkan!'); window.location.href='tambahData.php';</script>";
-        }
+if (isset($_POST['submit'])) {
+    if (tambahData($_POST) > 0) {
+        echo "<script>
+                alert('Data berhasil ditambahkan!');
+                window.location.href='Mahasiswa.php';
+              </script>";
+    } else {
+        echo "<script>
+                alert('Data gagal ditambahkan!');
+                window.location.href='tambahData.php';
+              </script>";
     }
+}
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +28,7 @@
     <h2>
         Tambah Data Mahasiswa
     </h2>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <table cellpadding="5px">
             <tr>
                 <td>
@@ -86,7 +82,7 @@
                     :
                 </td>
                 <td>
-                    <input type="number" id="no-hp" name="no-hp" required>
+                    <input type="tel" id="no-hp" name="no-hp" required>
                 </td>
             </tr>
             <tr>
@@ -97,7 +93,7 @@
                     :
                 </td>
                 <td>
-                    <input type="text" id="Foto" name="Foto" required>
+                    <input type="file" id="Foto" name="Foto" accept="image/*" required>
                 </td>
             </tr>
             <tr>

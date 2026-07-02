@@ -68,10 +68,15 @@
             <td><?php echo $mhs['jurusan']; ?></td>
             <td><?php echo $mhs['email']; ?></td>
             <td><?php echo $mhs['no_hp']; ?></td>
-            <td><?php echo $mhs['foto']; ?></td>
             <td>
-                <a href="editData.php"><button>Edit</button></a> |
-                <a href="hapusData.php"><button>Hapus</button></a>
+                <img src="assets/img/<?php echo $mhs['foto']; ?>" width="80">
+            </td>
+            <td>
+
+                <a href="editData.php?id=<?php echo $mhs['id']; ?>"><button>Edit</button></a> |
+                <a href="hapusData.php?id=<?php echo $mhs['id']; ?>"
+                    onclick="return confirm('Data akan dihapus secara permanen. Lanjutkan?');"><button>Hapus</button></a>
+
             </td>
         </tr>
         <?php
